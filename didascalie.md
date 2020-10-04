@@ -11,6 +11,7 @@ Mostra il manuale relativo al comando che segue.
 *man -k $command* mostra una descrizione sommaria del comando. Alias di *whatis $command*
 
 **sam-sepi@home:~$** *man -k netcat*
+
 *netcat (1)           - TCP/IP swiss army knife*
 
 ## Where is, what is and who is
@@ -20,6 +21,7 @@ Mostra il manuale relativo al comando che segue.
 *whereis $command* restituisce la locazione del file e del relativo manuale
 
 **sam-sepi@home:~$** *whereis netcat*
+
 *netcat: /usr/bin/netcat /usr/share/man/man1/netcat.1.gz*
 
 *whois $host* client per il servizio di directory *whois*
