@@ -1,0 +1,32 @@
+Comandi per la gestione di directories
+
+Muoversi tra le directories
+
+pwd mostra la directory corrente
+
+sam-sepi@home:~$ pwd
+/home/sam-sepi
+
+cd per cambiare directory (change directory)
+
+Ex: cd directory o con path assoluto cd */directory*
+
+cd ~ per tornare alla cartella *user*.
+
+cd - per tornare alla directory precedente
+
+Lista dei contenuti di una directory
+
+ls per ottenere la lista dei contenuti.
+
+sam-sepi@home:~$ ls
+Documenti   Immagini   Modelli   Musica   Pubblici   Scaricati   Scrivania   Video
+
+ls -a permette di vedere anche i files nascosti
+
+ls -l mostra una long list comprensiva dei permessi e ls -lh mostra le dimensioni della cartella raggruppando i bytes.
+
+sam-sepi@home:/Linux-commands$ ls -lh
+totale 8,0K
+-rw-r--r-- 1 sam-sepi sam-sepi 675 ott  4 15:16 didascalie.md
+-rw-r--r-- 1 sam-sepi sam-sepi 761 ott  4 15:16 directories.md
