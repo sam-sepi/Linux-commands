@@ -1,0 +1,40 @@
+Comandi per la gestione dei files
+
+file per ottenere informazioni su di un file
+
+sam-sepi@home:~$ file directories.txt
+directories.txt: ASCII text
+
+file -s per ottenere informazioni su file speciali (come le partizioni, per esempio)
+
+touch per creare file vuoti
+
+sam-sepi@home:~$ touch test.php
+sam-sepi@home:~$ file test.php
+test.php: empty
+
+rm permette di cancellare i files
+
+sam-sepi@home:~$ rm test.php
+
+rm -i per evitare di cancellare inavvertitamente files utili
+
+sam-sepi@home:~$ touch test.php
+sam-sepi@home:~$ rm -i test.php
+rm: rimuovere file regolare vuoto 'test.php'? y
+
+rm -r per rimuovere ricursivamente le directories. 
+rm -rf per forzare la rimozione ricursiva se si possiedono i permessi giusti.
+
+cp file file2 per copiare file in file2
+
+cp -r dir1 /dir2 per copiare ricursivamente directory 
+
+cp -i per evitare di sovrascrivere un file esistente
+
+mv file1 file2 per rinominare il file file1 in file2
+
+mv dir1 dir2 può essere usato anche per le directories
+
+mv -i file1 file2 per esser certi
+

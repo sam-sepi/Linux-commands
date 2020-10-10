@@ -28,5 +28,10 @@ ls -l mostra una long list comprensiva dei permessi e ls -lh mostra le dimension
 
 sam-sepi@home:/Linux-commands$ ls -lh
 totale 8,0K
--rw-r--r-- 1 sam-sepi sam-sepi 675 ott  4 15:16 didascalie.md
--rw-r--r-- 1 sam-sepi sam-sepi 761 ott  4 15:16 directories.md
+-rw-r--r-- 1 sam-sepi sam-sepi 675 ott  4 15:16 didascalie.txt
+-rw-r--r-- 1 sam-sepi sam-sepi 761 ott  4 15:16 directories.txt
+
+mkdir directory crea la directory directory
+mkdir -p directory/directory1 crea la directory genitore directory e quella figlio directory1
+
+rmdir rimuove le directory se vuote
