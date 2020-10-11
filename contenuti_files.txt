@@ -40,3 +40,5 @@ sam-sepi@home:~$ cat test.php
 <?php echo 'hello';
 
 tac per leggere al contrario i contenuti dei files
+
+strings permette di leggere come stringhe ascii files binari
