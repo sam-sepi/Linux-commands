@@ -1,0 +1,42 @@
+Lavorare con i contenuti dei files
+
+head file permette di leggere le prime dieci righe di un file
+
+oppure head -n file permette di leggere n righe
+
+tail file permette di leggere le ultime dieci righe
+
+tail -n file permette di leggere le ultime n righe di un file
+
+cat file permette di leggere tutto il file
+
+cat file1 file2 filen permette di concatenare il contenuto dei files
+
+cat all concatena tutto il contenuto dei files della directory
+
+cat > file  crea file e permette di inserire i contenuti. Una volta concluso l'inserimento è possibile
+premere Ctrl + d per chiudere l'editor e salvare il file.
+
+sam-sepi@home:~$ cat > text.php
+<?php echo 'hello';
+sam-sepi@home:~$ cat text.php
+<?php echo 'hello';
+sam-sepi@home:~$ php text.php
+hello
+
+è possibile utilizzare << come end marker
+
+sam-sepi@home:~$ cat > test.txt <<endfile
+hello
+goodbye
+endfile
+sam-sepi@home:~$ cat test.txt
+hello
+goodbye
+
+cat file1 > file2 per copiare un file
+
+sam-sepi@home:~$ cat test.php
+<?php echo 'hello';
+
+tac per leggere al contrario i contenuti dei files
