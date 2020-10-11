@@ -1,0 +1,79 @@
+Il filesystem secondo l'FHS (Filesystem Hierarchy Standard)
+
+La struttura del filesystem in Linux comincia a partire dalla root directory.
+
+La root directory è rappresentata da '/'.
+
+La directory /bin contiene files binari pronti all'uso. 
+/bin/cat per esempio o /bin/bash o, ancora, /bin nano.
+
+sam-sepi@home:/bin$ ls
+'['                                   hwloc-gather-topology              pyrcc5
+ 2to3-2.7                             hwloc-info                         py.test-3
+ 7z                                   hwloc-ls                           pytest-3
+ 7za                                  hwloc-patch                        python
+ 7zr                                  hwloc-ps                           python2
+ aa-enabled                           hydra                              python2.7
+ aa-exec                              hydra-wizard                       python2.7-config
+ ab                                   i386                               python2-config
+ acyclic                              iasecc-tool                        python3
+ add-apt-repository                   ibus                               python3.8
+ addpart                              ibus-daemon                        python3.8-config
+ addr2line                            ibus-setup                         python3-config
+ aircrack-ng                          icalendar                          python3-futurize
+ airdecap-ng                          icat                               python3-pasteurize
+ airdecloak-ng                        iceauth                            python3-qr
+ ...
+
+Nella directory /sbin si trovno files binari per la gestione del sistema operativo. Molti di questi files
+richiedono autorizzazioni da super user.
+
+sam-sepi@home:/sbin$ ./ifconfig
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+    inet 192.168.1.21  netmask 255.255.255.0  broadcast 192.168.1.255
+
+L'insieme delle librerie utili al sistema operativo si trovano in /lib. 
+
+In /lib/modules le versioni dell'OS.
+
+In /opt si trova il software opzionale. 
+Molto spesso questo software non è compreso nel repository originale del sistema operativo.
+Un software con un package ampio potrebbe installare parte del software in /bin /etc oltre che in /opt
+
+Nella directory /boot ci sono i files per l'avvio del pc. 
+In /boot/grub/grub.cfg si trova la configurazione del menu boot caricato prima dell'avvio del kernel.
+
+Tutti i files di configurazione si troano in /etc (Editable Text Configuration).
+
+sam-sepi@home:~$ cat /etc/proxychains.conf
+# proxychains.conf  VER 3.1
+#
+#        HTTP, SOCKS4, SOCKS5 tunneling proxifier with DNS.
+...
+
+In /etc/init.d/ sono contenuti gli script per avviare o terminare i daemon (programmi eseguiti in background)
+
+sam-sepi@home:/etc/init.d$ service apache2 start
+
+I dati personali sono custoditi nella directory /home.
+
+/mnt è una directory vuota che può essere usata per temporanei mount points (file system temporanei che possono essere montati e smontati). 
+
+I files temporanei sono salvati in /tmp
+
+Nella directory /dev sono conservati i files che il kernel riconosce come hardware
+
+In /proc invece ci sono i processi
+
+Gli interrputs del sistema operativo si trovano nel file /proc/interrupts
+
+sam-sepi@home:/proc$ cat interrupts
+            CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+   0:          7          0          0          0          0          0          0          0  IR-IO-APIC    2-edge      timer
+   1:          0          0          0          0          0          0          0      17976  IR-IO-APIC    1-edge      i8042
+...
+
+Le risorse dei sistemi Unix si trovano in /usr (Unix System Resources)
+
+Log, cache e spoof files sono ospitati in /var
